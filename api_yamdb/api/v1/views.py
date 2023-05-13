@@ -3,21 +3,15 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, viewsets
 from rest_framework.viewsets import ModelViewSet
 
-from core.permissions import (
-    IsAdminOrReadOnly,
-    IsAuthorModeratorAdminOrReadOnly,
-)
-from reviews.models import Category, Genre, Review, Title
+from api_yamdb.core.permissions import (IsAdminOrReadOnly,
+                                        IsAuthorModeratorAdminOrReadOnly)
+from api_yamdb.reviews.models import Category, Genre, Review, Title
+
 from .filters import TitleFilter
 from .mixins import GetListCreateDeleteMixin
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleRetrieveSerializer,
-    TitleWriteSerializer,
-)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitleRetrieveSerializer, TitleWriteSerializer)
 
 
 class ReviewViewSet(ModelViewSet):
