@@ -3,9 +3,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, viewsets
 from rest_framework.viewsets import ModelViewSet
 
-from api_yamdb.core.permissions import (IsAdminOrReadOnly,
-                                        IsAuthorModeratorAdminOrReadOnly)
-from api_yamdb.reviews.models import Category, Genre, Review, Title
+from core.permissions import (IsAdminOrReadOnly,
+                              IsAuthorModeratorAdminOrReadOnly)
+from reviews.models import Category, Genre, Review, Title
 
 from .filters import TitleFilter
 from .mixins import GetListCreateDeleteMixin

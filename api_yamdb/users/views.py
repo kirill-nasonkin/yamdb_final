@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
-from api_yamdb.core.permissions import IsAdmin
+from core.permissions import IsAdmin
 
 from .models import User
 from .registration.confirmation import send_confirmation_code
