@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: sticheeg/api_yamdb:v1.00.0000
+    image: sticheeg/api_yamdb:final
     restart: always
     volumes:
       - static_value:/app/static/
