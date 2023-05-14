@@ -1,4 +1,4 @@
-name: Django-app workflow
+name: Yam_DB workflow
 
 on: push
 
@@ -31,7 +31,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
-      - name: Changing wd
+      - name: Changing working dir
         run: cd api_yamdb/
 
       - name: Set up Docker Buildx
